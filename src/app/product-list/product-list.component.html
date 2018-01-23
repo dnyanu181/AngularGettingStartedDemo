@@ -1,0 +1,46 @@
+<p>
+  product-list works!
+</p>
+
+ 
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+         
+  </div>
+  <div class="panel-body">
+  <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+          
+      </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6" >
+    <h3> Products </h3>
+  </div>
+  </div>
+  <div class="table-responsive">
+      <table class="table" *ngIf='data && data.length'>  
+          <thead>
+              <tr>
+              <th> <button class="btn btn-primary" (click)='toggleImage()'>{{showImage ? 'Hide' : 'Show'}} Image </button></th>
+              <th>Product Name</th>
+              
+          </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let product of data'>
+               
+                  <td>{{product.productName}}</td>
+               
+  
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  
+  </div>
+  
+  </div>
