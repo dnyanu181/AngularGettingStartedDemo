@@ -10,10 +10,13 @@ import { IProduct } from './products';
 })
 export class ProductListComponent implements OnInit {
 private data: IProduct[];
+private showImage: boolean;
   constructor(private _productservice: ProductService) { }
 
   ngOnInit() {
 this._productservice.getProducts().subscribe(product => { this.data = product; });
   }
-
+ toggleImage(): void {
+ this.showImage = !this.showImage;
+ }
 }

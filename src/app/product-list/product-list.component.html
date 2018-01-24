@@ -1,10 +1,3 @@
-<p>
-  product-list works!
-</p>
-
- 
-
-
 <div class="panel panel-primary">
   <div class="panel-heading">
          
@@ -25,15 +18,20 @@
       <table class="table" *ngIf='data && data.length'>  
           <thead>
               <tr>
-              <th> <button class="btn btn-primary" (click)='toggleImage()'>{{showImage ? 'Hide' : 'Show'}} Image </button></th>
+              <th> <button class="btn btn-primary" (click)='toggleImage()' >{{showImage ? 'Hide' : 'Show'}}  Image</button></th>
               <th>Product Name</th>
+              <th>Product Code</th>
+              <th>Description</th>
               
           </tr>
           </thead>
           <tbody>
               <tr *ngFor='let product of data'>
-               
+                <td><img [src]='product.imageUrl' *ngIf='showImage' [style.width.px]='70' [style.height.px]='70' /></td>
                   <td>{{product.productName}}</td>
+                  <td>{{product.productCode}}</td>
+                  <td>{{product.description}}</td>
+
                
   
               </tr>
